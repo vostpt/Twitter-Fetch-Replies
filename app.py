@@ -27,7 +27,7 @@ account_name = input("Enter the account name: ")
 
 replies = tweepy.Cursor(api.search_tweets, q=f'to:{account_name}', since_id=tweet_id, tweet_mode='extended').items()
 
-with open('psp_replies.csv', 'w', newline='', encoding='utf-8') as file:
+with open('your_csv_file_name.csv', 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(["id", "user", "text", "url"])
     
